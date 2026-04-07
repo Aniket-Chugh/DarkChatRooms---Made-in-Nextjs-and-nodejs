@@ -2,6 +2,7 @@ import express from "express"
 import RegisterRouter from "./src/api/routes/auth.route.js"
 import cookieParser from "cookie-parser";
 import cors from "cors"
+import CheckAuthRouter from "./src/api/routes/checkAuth.route.js";
 const app = express();
 
 
@@ -12,7 +13,7 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
-
+app.use("/api", CheckAuthRouter);
 app.get("/", (req, res) => {
     res.send("everything going good mf")
 })

@@ -1,15 +1,21 @@
 import dotenv from "dotenv"
-dotenv.config
+dotenv.config();
+
+const TOKEN_TYPES = {
+    ACCESS: "x9aK",
+    REFRESH: "p7LmQ",
+};
 
 const TOKEN_CONFIG = {
-    access: {
+    [TOKEN_TYPES.ACCESS]: {
         secret: process.env.JWT_ACCESS_SECRET,
-        expiresIn: "15m",
+        expiresIn: "7m",
     },
-    refresh: {
+    [TOKEN_TYPES.REFRESH]: {
         secret: process.env.JWT_REFRESH_SECRET,
         expiresIn: "7d",
     },
 };
 
+export { TOKEN_TYPES };
 export default TOKEN_CONFIG;

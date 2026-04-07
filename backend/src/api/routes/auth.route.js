@@ -5,4 +5,5 @@ import { register } from "../controllers/auth.controller.js";
 
 RegisterRouter.post("/auth/register", register)
 
+
 export default RegisterRouter;

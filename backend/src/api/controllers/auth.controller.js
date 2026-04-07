@@ -2,6 +2,7 @@ import { RegisterDao } from "../../repositories/user.repository.js";
 import { bcryptHash } from "../../utils/bcrypt.js";
 import { registrationInputValidation } from "../../validation/input.registration.validation.js";
 import { cookieOptions } from "../../connections/cookies.connection.js";
+import { TOKEN_TYPES } from "../../connections/TOKEN_CONFIG.connection.js";
 
 export const register = async (req, res) => {
     try {
@@ -39,14 +40,21 @@ export const register = async (req, res) => {
         });
 
 
-        const expiryTime = Number(data?.expireIn) || 900000;
 
-        res.cookie("accessToken", data.accessToken, cookieOptions(expiryTime));
+        const RefreshexpireIn = data.RefreshexpireIn
+        const date = parseInt(RefreshexpireIn);
 
+
+        const milliRefreshexpireIn = date * 24 * 60 * 60 * 1000
+
+        console.log(data.username);
+
+        res.cookie(TOKEN_TYPES.REFRESH, data.RefreshToken, cookieOptions(milliRefreshexpireIn));
 
         return res.status(201).json({
             success: true,
             message: "User registered successfully.",
+            accessToken: data.accessToken,
         });
 
     } catch (error) {
