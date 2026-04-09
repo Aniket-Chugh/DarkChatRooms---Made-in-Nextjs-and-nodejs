@@ -25,3 +25,5 @@ CREATE TABLE user_profile (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
     ON DELETE CASCADE
 );
+
+-- refresh token table to get regresh token

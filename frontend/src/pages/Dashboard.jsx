@@ -42,7 +42,7 @@ export const Dashboard = () => {
             </div>
           </div>
 
-          {/* Simple Profile Dropdown (MNC Style) */}
+     
           {showProfile && (
             <div className="absolute top-12 right-0 w-64 bg-white border border-[#e0e0e0] shadow-xl z-50 animate-in fade-in slide-in-from-top-1">
               <div className="p-4 border-b border-[#f4f4f4] bg-[#f4f4f4]">
@@ -64,7 +64,7 @@ export const Dashboard = () => {
           )}
         </header>
 
-        {/* Dashboard Content */}
+
         <div className="p-10">
           <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-2">Authenticated Session</h2>
           <h1 className="text-4xl font-extralight tracking-tighter">Root / <span className="font-bold">{username}</span></h1>
