@@ -8,12 +8,23 @@ Completed features are marked with ✅ and upcoming features remain unchecked.
 
 # Core Platform
 
-- [x] User registration
-- [ ] User login
-- [ ] JWT authentication
-- [x] Password hashing (bcrypt)
-- [ ] Email verification
-- [ ] Password reset system
+- [x] User Registration (Complete flow with validation)
+
+  [x] Password Hashing (bcrypt) (Secure storage)
+
+ - [x] JWT Authentication (Access & Refresh token logic ready hai)
+
+- [x] Session Management (Redis) (Whitelisting implementation)
+
+- [x] Advanced Fingerprinting (Device tracking logic)
+
+ - [ ] Refresh Token Rotation (Replay attack protection)
+
+ - [ ] User Login (Bas controller banana bacha hai, logic ready hai)
+
+ - [ ] Email Verification (Future scope)
+
+ = [ ] Password Reset System (Future scope)
 
 ---
 
