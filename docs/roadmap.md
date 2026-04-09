@@ -10,7 +10,7 @@ Completed features are marked with ✅ and upcoming features remain unchecked.
 
 - [x] User Registration (Complete flow with validation)
 
-  [x] Password Hashing (bcrypt) (Secure storage)
+ - [x] Password Hashing (bcrypt) (Secure storage)
 
  - [x] JWT Authentication (Access & Refresh token logic ready hai)
 
