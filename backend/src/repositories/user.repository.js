@@ -27,8 +27,6 @@ export const RegisterDao = async ({ username, displayName, email, hashedPass }) 
         const accessToken = signToken(TOKEN_TYPES.ACCESS, { user_id, username });
         const Refresh_Token = signToken(TOKEN_TYPES.REFRESH, { user_id, username });
 
-
-
         return {
             success: true,
             user: {
